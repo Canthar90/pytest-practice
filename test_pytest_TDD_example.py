@@ -32,7 +32,6 @@ def test_format_data_for_display(example_people_data):
     
 def test_format_daa_for_excel(example_people_data):
     
-    assert format_data_for_excel(example_people_data) == ["""given,family,title
-     Alfonsa,Ruzi,Senior Software Engeener
-     Saydi,Khan,Project Manager 
-     """]
+    assert format_data_for_excel(example_people_data) == """given,family,title
+Alfonsa,Ruzi,Senior Software Engeener
+Sayid,Khan,Project Manager"""
