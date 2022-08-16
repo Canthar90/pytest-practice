@@ -29,7 +29,11 @@ def test_format_data_for_display(example_people_data):
         "Sayid Khan: Project Manager",
     ]
     
-    
+
+# marks are nice way to limit tests maked at the moment we can also exclude with logical not
+# for example pytest -vv -m "not excel_format"
+# pytest comes with fyew marks on its own: skip, skipif, xfail, parametrize
+@pytest.mark.excel_format    
 def test_format_daa_for_excel(example_people_data):
     
     assert format_data_for_excel(example_people_data) == """given,family,title
